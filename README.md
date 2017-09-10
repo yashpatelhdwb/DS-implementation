@@ -7,7 +7,7 @@ All these programs run perfectly if compiled with `gcc` compiler.
 
 In case, you wanna run this programs in TURBOC IDE then just make the following changes
 
-1. Find the statement `int main()` and change it to `void main`
+1. Find the statement `int main()` and change it to `void main()`
 
 2. Find the statement `return 0;` and change it to `getch();`
 
