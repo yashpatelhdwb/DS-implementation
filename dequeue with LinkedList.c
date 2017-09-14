@@ -27,7 +27,6 @@ void insertAtTail(int value){
   }
   
   while(temp1->next != NULL) temp1 = temp1->next;
-  
   node temp2 = (node)malloc(sizeof(node));
   temp2->next = NULL;
   temp2->prev = temp1;
