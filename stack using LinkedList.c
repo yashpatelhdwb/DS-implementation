@@ -83,7 +83,7 @@ void peek(){
   node temp = head;
   if(temp == NULL) printf("Stack is empty\n");
   else{
-    while(temp != NULL){
+    while(temp->next != NULL){
       temp =temp->next;
     }
     printf("peek function executed\nHere's the value found:%d\n",temp->data);
