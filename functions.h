@@ -32,16 +32,6 @@ void insertAtEnd(int x){
   }
 }
 
-int getSize(){
-  node temp = head;
-  int count=0;
-  while(temp != NULL){
-    temp = temp->next;
-    count++;
-  }
-  return count;
-}
-
 void deleteAtBeginning(){
   node temp = head;
   temp  = temp->next;
