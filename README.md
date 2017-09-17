@@ -1,6 +1,6 @@
 # DFS assignment
 # Data Structure implementation
-#NOTE Almost all Singly LinkedList's functions are implemented in functions.h 
+#NOTE Almost all Singly LinkedList's functions are implemented in `functions.h`
 
 
 All these programs run perfectly if compiled with `gcc` compiler.
