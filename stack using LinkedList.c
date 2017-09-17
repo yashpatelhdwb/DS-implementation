@@ -1,47 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "functions.h"
 
-struct Node {
-  int data;
-  struct Node* next;
-};
-
-typedef struct Node* node;
 node head;
-node createNewNode(){
-  return (node)malloc(sizeof(node));
-}
-void insertAtBeginning(int x){
-  node current = createNewNode();
-  current->data = x;
-  current->next = head;
-  head = current;
-}
 
-void insertAtEnd(int x){
-  if(head == NULL){
-    insertAtBeginning(x);
-  }
-  else{
-    node temp1 = head;
-    while(temp1->next != NULL){
-      temp1 = temp1->next;
-    }
-    node temp2 = createNewNode();
-    temp2->data = x;
-    temp2->next = NULL;
-    temp1->next = temp2;
-  }
-}
-
-void print(){
-  node temp = head;
-  while(temp != NULL){
-    printf("%d ",temp->data);
-    temp = temp->next;
-  }
-  printf("\n");
-}
 void getTopOfStack(){
   node temp = head;
   if(temp == NULL) printf("Stack is empty\n");
@@ -51,16 +13,6 @@ void getTopOfStack(){
   }
   printf("right now TOP of the stack element is %d\n",temp->data);
   }
-}
-
-int getSize(){
-  node temp = head;
-  int c = 0;
-  while(temp != NULL){
-    temp = temp->next;
-    c++;
-  }
-  return c;
 }
 
 void pop(){
@@ -97,22 +49,6 @@ void isEmpty(){
 }
 int main(){
   head = NULL;
-  // int t,n,k,s;
-  // printf("Number of queries? ");
-  // scanf("%d",&t);
-  // printf("");
-  // while(t--){
-  //   scanf("%d",&n);
-  //   insertAtEnd(n);
-  // }
-  // print();
-  // getTopOfStack();
-  // printf("do you wanna perform pop operation? if yes press 1\n");
-  // scanf("%d",&k);
-
-  // if(k == 1){
-  //   pop();
-  // }
   printf("1.push\n2.pop\n3.peek\n4.isEmpty\n5.Get top of the stack\n6.exit\n");
     while(1){
       int ch,n;
