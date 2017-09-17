@@ -32,6 +32,32 @@ void insertAtEnd(int x){
   }
 }
 
+void deleteAtBeginning(){
+  node temp = head;
+  temp  = temp->next;
+  free(head);
+  head = temp;
+}
+int getSize(){
+  node temp = head;
+  int count=0;
+  while(temp != NULL){
+    temp = temp->next;
+    count++;
+  }
+  return count;
+}
+void deleteAtEnd(){
+  node temp1 = head;
+  // while(temp1->next != NULL){
+  //   temp1 = temp1->next;
+  // }
+  for(int i=0; i<getSize()-2; i++) temp1 = temp1->next;
+  node temp2 = temp1->next;
+  temp1->next = NULL;
+  free(temp2);
+}
+
 void print(){
   node temp = head;
   while(temp != NULL){
