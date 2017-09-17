@@ -73,39 +73,18 @@ int getSize(){
 int main(){
   head = NULL;
   tail = NULL;
-  // int t,n,m;
-  // scanf("%d",&t);
-  // while(t--){
-    // scanf("%d",&n);
-    int n = 10;
-    insertAtTail(n++);
-    insertAtTail(n++);
-    insertAtTail(n++);
-    insertAtTail(n++);
-    insertAtTail(n++);
-    insertAtHead(n--);
-    insertAtHead(n--);
-    insertAtHead(n--);
-
-  // }
+  int t,n,m;
+  scanf("%d",&t);
+  while(t--){
+    scanf("%d",&n);
+    if(n%2==0) insertAtHead(n);
+    else insertAtTail(n);
+  }
   print();
-  // printf("Wanna move forward?\n");
-  // scanf("%d",&m);
-  // if(m==1){
-  // for(int i=1; i<=t; i++){
-  //     if(i%2==0){ 
-  //       deleteAtEnd();
-  //       print();
-  //     }
-  //     else{ 
-  //       deleteAtBeginning();
-  //       print();
-  //     }
-  //   }
     deleteAtEnd();
     print();
     deleteAtBeginning();
     print();
-  // }
+
   return 0;
 }
