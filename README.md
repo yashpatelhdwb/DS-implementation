@@ -12,3 +12,4 @@ In case, you wanna run this programs in TURBOC IDE then just make the following 
 2. Find the statement `return 0;` and change it to `getch();`
 
 3. If the preprocessor directive `#include<conio.h>` isn't included then please include it, it will required for clearing the console screen. For that call `clrscr();` function from the main function.
+4. Hi Nimesh.
